@@ -1,11 +1,7 @@
 
 '''
-Este programa lee una frase introducida por el 
-usuario, y registra solamente la primera letra 
-de la frase.
-ejemplo:
-    caracteristica
-    carteis
+Este programa lee dos palabres y las añade a una
+tupla para leer las veces que sale cada letra
 '''
 entrada = input("Introduce una frase: ")
 entrada.split(" ")
@@ -33,9 +29,25 @@ while True:
             break
         #print(len(diccionarioEncontrado))
         if diccionarioEncontrado[int(intDentroFor)] == entrada[int(bucleLectura)]:
-            
             break
         intDentroFor=intDentroFor+1
     bucleLectura=bucleLectura+1
+#OBTENEMOS EL diccionario de letras
+intFueraOut=0
+while True:#Pasamos por el diccionario
+    if intFueraOut >= len(diccionarioEncontrado):
+        break
+    intDentroSub=0
+    intLetraVecesEncontrada=0
+    while True:#Pasamos por el texto
+        print(intDentroSub)
+        if intDentroSub >= len(entrada):
+            print("La letra ",diccionarioEncontrado[intFueraOut]," ha sido encontrada ",intLetraVecesEncontrada," veces.")
+        if entrada[intDentroSub] == diccionarioEncontrado[intFueraOut]:
+            intLetraVecesEncontrada=intLetraVecesEncontrada+1
+        intDentroSub=intDentroSub+1
+
+    intFueraOut=intFueraOut+1
+
+
 print("fin")
-print(diccionarioEncontrado)
