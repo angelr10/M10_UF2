@@ -1,6 +1,6 @@
 #Este fichero se encarga de generar una orden que reciba la base de datos indicandole que genere una tabla
 
-sql = '''CREATE TABLE(
+sql = '''CREATE TABLE COCHES(
     coche_id SERIAL PRIMARY KEY,
     coche_prop_nombre VARCHAR(255) NOT NULL,
     coche_prop_edad TINYINT NOT NULL
