@@ -12,3 +12,4 @@ conn = psycopg2.connect(
 #establece una conexion a la bd
 connection = conn.cursor()
 print(connection)
+return connection
