@@ -2,6 +2,9 @@ from __future__ import annotations
 from abc import ABC, abstractmethod
 
 # AbstractFactory
+#Este contiene la base base pero a su vez
+#genera metodos que seran imprescindibles 
+#mas adelante.
 class UtiensilioEscritura(ABC):
     @abstractmethod
     def creaLapiz(self) -> AbstractLapiz:
@@ -16,11 +19,15 @@ class UtiensilioEscritura(ABC):
         pass
 
 # ConcreteFactoryA
+
 class Bic(UtiensilioEscritura):
     def creaLapizBic(self):
         return ConcreteProductA1()
     
-    def creaBoliBic(self):
+    def creaBoliBic(self) -> :
+        return ConcreteProductB1()
+    
+    def creaRotuladorBic(self) -> BoliBic:
         return ConcreteProductB1()
     
 #ConcreteFactoryB
